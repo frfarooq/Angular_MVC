@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+       
+    <div ng-app="Homeapp" ng-controller="HomeController">
+        <form>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">id</label>
+                <input class="form-control placeholder-no-fix" type="text" ng-model="Registeration.id" autocomplete="off" placeholder="Username" name="username" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <input class="form-control placeholder-no-fix" type="text" autocomplete="off" ng-model="Registeration.name" placeholder="Username" name="username" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Phone</label>
+                <input class="form-control placeholder-no-fix" type="text" autocomplete="off" ng-model="Registeration.phone" placeholder="Username" name="username" />
+            </div>
+
+            <div class="form-group">
+                <input type="button" value="{{btntext}}" ng-click="savedata()" class="btn btn-primary" />
+            </div>
+        </form>
+        <script src="~/script/angular.min.js"></script>
+        <script src="~/script/AngularControl/HomeAngular.js"></script>
+    </div>
+    }
+</body>
+</html>
